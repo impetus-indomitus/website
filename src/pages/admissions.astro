@@ -1,0 +1,79 @@
+---
+import Title from '../components/Title.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="IMPETUS INDOMITUS - Admissions" description="Join our research group">
+    <Title title="Admissions" />
+
+    <!-- HEADER CON EL FORMULARIO Y TEXTO -->
+    <header class="container mx-auto max-w-screen-xl px-4 py-16 grid sm:grid-cols-1 md:grid-cols-2 items-center gap-12">
+        
+        <!-- Left Panel -->
+        <div class="flex flex-col justify-center items-center bg-white p-10 rounded">
+            <p class="mb-6 text-lg text-black text-center">
+                To be part of the Impetus Indomitus research team, you must be certified in the handling of all the equipment used by the team and the Fluid Mechanics Laboratory, as well as complete the First Responder Course by IDIGER (certificate upload required). Once certified, you will be able to choose a project from our list or define one with Professor Guillermo Jaramillo. 
+                <br/><br/>
+                To apply, enter the data in the form and learn more about the certificates by clicking on the button below.
+            </p>
+
+            <button class="bg-black text-white px-6 py-2 rounded-full border border-black hover:bg-white hover:text-black transition mt-6">
+                Certifications
+            </button>
+        </div>
+
+        <!-- Right Panel (Form) -->
+        <div class="bg-black border border-white rounded-lg p-8 w-full">
+            <h2 class="text-2xl font-bold mb-6 text-white">REGISTER</h2>
+            <p class="mb-6 text-white">Enter your contact information and we will contact you to let you know the steps to follow to join our team.</p>
+
+            <form action="#" method="POST" class="flex flex-col space-y-6">
+                <!-- Campo Name -->
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Full name" 
+                    class="w-full px-4 py-3 rounded-lg bg-white text-black focus:outline-none"
+                />
+
+                <!-- Campo Email -->
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Email" 
+                    class="w-full px-4 py-3 rounded-lg bg-white text-black focus:outline-none"
+                />
+
+                <!-- Campo Phone -->
+                <input 
+                    type="tel" 
+                    name="phone" 
+                    placeholder="Phone number" 
+                    class="w-full px-4 py-3 rounded-lg bg-white text-black focus:outline-none"
+                />
+
+                <!-- Campo Motivation -->
+                <div class="flex flex-col space-y-2">
+                    <label class="text-sm text-white">Write your motivation to be part of the team</label>
+                    <textarea 
+                        name="motivation" 
+                        rows="4" 
+                        placeholder="Your motivation" 
+                        class="w-full px-4 py-3 rounded-lg bg-white text-black focus:outline-none"
+                    ></textarea>
+                </div>
+
+                <!-- Botón -->
+                <div>
+                    <button 
+                        type="submit" 
+                        class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition"
+                    >
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </header>
+</Layout>
